@@ -48,7 +48,7 @@ export class AppComponent {
 
   public print(clickedItem: string) {
     if (clickedItem.search(this.regex) === -1) {
-      // condition pour détecter si c'est le 2eme chiffire après avoir tapé un opérateur
+      // condition pour détecter si c'est le 2eme chiffire après avoir tapé est un opérateur
       if (this.startNewNumber === true) {
         this._printContent = ''; // c'est un nouveau nombre on efface l'ecran avant d'afficher
         this.startNewNumber = false;
@@ -72,7 +72,7 @@ export class AppComponent {
       // si on tape un operateur
       this.startNewNumber = true; // le prochain chiffre commencera un nouveau nombre
       if (clickedItem === '=') {
-        // ontape un =
+        // on tape un =
         //si currentoperator est +
         if (this.currentOperator === '+') {
           this.add(Number(this.firstNumber), Number(this._printContent));
